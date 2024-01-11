@@ -15,7 +15,7 @@ const Page = () => {
   const [ProgressState, setProgressState] = React.useState("inactive")
 
 
-  const apiURI = "http://127.0.0.1:5000"
+  const apiURI = "https://timcodes.pythonanywhere.com"
 
 
   const getTranslation = (source, word, target_language) => {
@@ -164,8 +164,10 @@ const Page = () => {
           <b className='text-[18px] mt-[20px]'>Source Code:</b>
           <br />
           <div className='w-full flex flex-row items-center justify-start gap-[20px]'>
-            <button className='bg-black w-[150px] h-[50px] rounded-[10px] p-0 flex flex-row items-center justify-center gap-[20px] text-white text-[14px]'> <img src='/github.svg' className='w-[20px] h-[20px]' /> frontend</button>
-            <button className='bg-black w-[150px] h-[50px] rounded-[10px] p-0 flex flex-row items-center justify-center gap-[20px] text-white text-[14px]'> <img src='/github.svg' className='w-[20px] h-[20px]' /> backend</button>
+            <button onClick={()=> window.open("https://github.com/Timcodes117/React-Translator")}
+            className='bg-black w-[150px] h-[50px] rounded-[10px] p-0 flex flex-row items-center justify-center gap-[20px] text-white text-[14px]'> <img src='/github.svg' className='w-[20px] h-[20px]' /> frontend</button>
+            <button onClick={()=> window.open("https://github.com/Timcodes117/TranslatorApi")}
+            className='bg-black w-[150px] h-[50px] rounded-[10px] p-0 flex flex-row items-center justify-center gap-[20px] text-white text-[14px]'> <img src='/github.svg' className='w-[20px] h-[20px]' /> backend</button>
           </div>
           
         </div>
